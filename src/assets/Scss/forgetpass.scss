@@ -1,0 +1,202 @@
+/* 忘记密码  */
+$color:black;
+
+#forget{   
+    background-image: url('/static/img/bg.png');
+	background-repeat:  no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed; /* 自适应尺寸 */
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+     position: absolute;
+     height: 99%;
+     width: 99%;
+     overflow-x: hidden;
+    .forget-form{
+        width: 447px;
+        height: 643px;
+        background-color: white;
+        text-align: center;
+        border-radius: 4px;
+        position: relative;
+        margin-left: 0;
+        margin-right: 0;
+        zoom: 1;
+        display: block;
+        .forget-header {
+            color: $color;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .forget-buttonform{
+            display:block;
+            text-align: center;
+            .login-button{
+                color: $color;
+                width: 240px;
+                margin-top: 30px;
+            }
+        }
+         .el-form{
+             .el-form-item{
+                 width: 100%;
+                p{
+                    font-weight: bold;
+                    font-size: 21px;
+                    width: 400px;
+                 }
+                .el-input{
+                    input{
+                        width: 300px;
+                        border: 0px;
+                        border-radius: 0;
+                        border-bottom: 1px #ccc solid;
+                    }
+                }
+                .getcode{
+                    position: absolute;
+                    right: -1px;
+                    margin-top: -47px;
+                    display:block;
+                    text-align: center;
+                    .login-button{
+                        color: $color;
+                        width: 240px;
+                        margin-top: 30px;
+                    }
+                }
+             }
+             .forgetPass{
+                 float: right;
+                 width: 143px;
+                 position: absolute;
+                color:#ccc;
+                a{
+                    color:#409eff;
+                    text-decoration: none;                
+                }
+             }
+             .forget-button{
+                 width: 304px;
+             }
+             button span{
+                 color:$color;
+             }
+         }
+    }
+}
+
+//注册
+button,input{
+    outline: none !important;
+    
+}
+.login-button,.forget-button,.getcode{
+    background: #FFDE2A ;
+    border: 1px solid #FFDE2A;
+}
+.select_content {
+	float: left;
+	width: 416px;
+	height: 44px;
+	float: left;
+	margin-right: 10px;
+	position: relative;
+	z-index: 10;
+}
+.select_content a.select_boxer {
+	display:block;
+	color: #333;
+	height: 44px;
+	overflow: hidden;
+	width: 412px;
+}
+.select_content a.select_boxer span.select_txt {
+	background: none repeat scroll 0 0 #fff;
+	color: #333;
+	cursor: pointer;
+	float: left;
+	line-height: 44px;
+	text-indent: 8px;
+    width: 390px;
+    text-align: left;
+    padding-left: 70px;
+}
+.select_content a.select_boxer span.arrow {
+	background: url("/static/img/arrow-icon.png") no-repeat ;
+	cursor: pointer;
+	float: right;
+	height: 39px;
+	margin: 17px 2px 0 0;
+	width: 17px;
+}
+.citylist {
+	background: #fff;
+	border: 1px solid #d2d2d2;
+	height: auto;
+	left: -1px;
+	position: absolute;
+	top: 44px;
+	width: 428px;
+}
+.citylist .city_tab {
+	height: 19px;
+	margin: 10px 0 0 12px;
+	position: relative;
+	z-index: 19;
+}
+.citylist .city_tab a, .citylist .city_tab a:hover {
+	color: #0100fe;
+	display: block;
+	float: left;
+	height: 19px;
+	line-height: 19px;
+	margin-right: 20px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	font-size:12px
+}
+.citylist .city_tab a.on, .citylist .city_tab a.on:hover {
+	border: #9c9c9c 1px solid;
+	border-bottom: none;
+	background: #e1e1e1;
+	color: #262626;
+	height: 18px;
+	line-height: 18px;
+	padding: 0 5px;
+	font-weight: bold;
+}
+.citylist ul {
+	width: 404px;
+	padding: 8px 0 6px 0;
+	border-top: #9c9c9c 1px solid;
+	margin: -1px 0 0 12px;
+	position: relative;
+	z-index: 18;
+}
+.citylist ul li {
+	width: 70px;
+	float: left;
+	margin: 0px 5px 0px 0px;
+	height: auto;
+	line-height: 25px;
+    font-size: 12px;
+    list-style: none;
+}
+.citylist ul li a {
+	display: block;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 5px;
+}

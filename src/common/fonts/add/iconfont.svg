@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="zengjia" unicode="&#58984;" d="M66.56 829.44v-890.88h890.88V829.44H66.56z m827.24352-827.24352H130.18624V765.80352h763.6224v-763.60704zM480.23552 415.74912H311.13728c-17.5616 0-32.01024-14.208-32.01024-31.74912 0-17.65888 14.33088-31.75936 32.01024-31.75936h169.09824v-169.09824c0-17.5616 14.22336-32.01024 31.75936-32.01024 17.664 0 31.75936 14.33088 31.75936 32.01024v169.09824h169.10848c17.5616 0 32 14.21824 32 31.75936 0 17.65888-14.32064 31.74912-32 31.74912h-169.10848V584.8576c0 17.56672-14.21312 32.02048-31.75936 32.02048-17.65376 0-31.75936-14.34112-31.75936-32.02048v-169.10848z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

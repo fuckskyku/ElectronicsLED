@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>咪师智慧班牌管理系统</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="context" class="context" 
+        style="width: 100%;
+        height: 100%;
+        margin: -15px 0px -8px -10px;
+        position: absolute;
+        z-index: 9999;
+        display: none;">
+        <div  
+          id="msg" class="msg" 
+          style="width: 100%;
+          height: 100%;
+          position: absolute;
+          text-align: center;
+          font-size:24px;
+          font-family:'幼圆';
+          font-weight:400;
+          color:#000;">
+          <div style="width: 362px;height: 358px;margin: 0 auto; margin-top: 169px;"><img src="/static/img/rocket.png" alt=""></div>
+          <p 
+            id="text"
+            style="width:914px;
+            height:30px;
+            margin:0 auto;
+            margin-top: 83px;"
+            >
+            <!-- 检测到您正在使用IE<span id="verSion"></span>浏览器,请先升级到IE11或使用其它浏览器才可以进行浏览 -->
+            <p id="chrome" 
+            style="
+              padding-top: 32px;
+              width: 500px;
+              margin: 0 auto;
+            ">
+              推荐使用<img style="vertical-align: middle;margin: 0 3px 6px;" src="/static/img/chrome.png" alt="">谷歌浏览器<a target="_blank" href='https://pc.qq.com/detail/1/detail_2661.html'>点击下载</a>
+            </p>
+
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+  //判断是否为IE/Safari
+  var versions
+  var userAgent = navigator.userAgent;  // 取得浏览器的 userAgent 字符串
+  // console.log("userAgent",userAgent) //IE不认得console
+  // alert(userAgent)
+	//欧朋浏览器4.0版本,userAgent中,有compatible MSIE
+	//判断是否为IE浏览器
+  if((userAgent.indexOf("compatible") != -1 && userAgent.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1) || userAgent.indexOf('Trident') != -1) {
+	  //alert("IE");
+	  
+	  //IE11 userAgent中，只有Trident
+	  if(userAgent.indexOf('Trident') != -1 && userAgent.indexOf("MSIE") == -1){
+        versions = userAgent.substr(userAgent.indexOf("rv:"),7).split(".")[0].replace(/[^0-9]/ig,"")
+        // alert(versions)
+      }
+	  //IE8,9,10 userAgent中，既有MSIE也有Trident
+	  if(userAgent.indexOf('Trident') != -1 && userAgent.indexOf("MSIE") != -1){
+		  versions = userAgent.substr(userAgent.indexOf("MSIE"),8).split(".")[0].replace(/[^0-9]/ig,"")
+		  //alert("检测到您正在使用IE"+versions+"浏览器,请先升级到IE11或使用其它浏览器才可以进行浏览,推荐使用谷歌浏览器,以获得最佳体验")
+    }
+    //IE8以下 userAgent中，不含Trident
+    if(userAgent.indexOf('Trident') == -1 && userAgent.indexOf("MSIE") != -1){
+      versions = userAgent.substr(userAgent.indexOf("MSIE"),8).split(".")[0].replace(/[^0-9]/ig,"")
+		  //alert("检测到您正在使用IE"+versions+"浏览器,请先升级到IE11或使用其它浏览器才可以进行浏览,推荐使用谷歌浏览器,以获得最佳体验")
+    }
+	  if(versions > 11 || versions == 11){
+		  alert("检测到您正在使用IE"+versions+"浏览器,推荐使用谷歌浏览器,以获得最佳体验")
+      
+	  }else{
+      context.style.display = 'block'
+		  // verSion.innerHTML = versions
+      text.innerHTML = "检测到您正在使用IE" + versions + "浏览器,请先升级到IE11或使用其它浏览器才可以进行浏览"
+      // text.innerHTML = `检测到您正在使用IE<span id="verSion"></span>浏览器,请先升级到IE11或使用其它浏览器才可以进行浏览`
+    }
+  }
+  //IE end
+  // //Safari
+  // if(userAgent.indexOf("Chrome") !== -1 && userAgent.indexOf("Safari") != -1){
+    
+  //   // this.router.beforeEach((to, from, next) => {
+  //   //   next({
+  //   //       path: '/login'  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+  //   //   }) 
+  //   // })
+  //   alert("检测到您正在使用Safari浏览器,推荐使用谷歌浏览器,以获得最佳体验")
+  //   // versions = userAgent.substr(userAgent.indexOf("version/"),4);
+  //   // alert(versions)
+  //   // context.style.display = 'block'
+  //   // text.innerHTML = `检测到您正在使用Safari浏览器,推荐使用谷歌浏览器,以获得最佳体验`
+  // }
+
+</script>

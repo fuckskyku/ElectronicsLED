@@ -1,0 +1,131 @@
+/* 登录  */
+$color:black;
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px rgba(0,0,0,0) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0) inset !important;
+    border: 0px solid transparent !important;
+    -webkit-text-fill-color: transparent;
+}
+
+#login{   
+    background-image: url('/static/img/bg.png');
+	background-repeat:  no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed; /* 自适应尺寸 */
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     overflow-x: hidden;
+    .login-form{
+        width: 446px;
+        height: 510px;
+        background-color: white;
+        text-align: center;
+        border-radius: 4px;
+        position: relative;
+        margin-left: 0;
+        margin-right: 0;
+        zoom: 1;
+        display: block;
+        .login-header {
+            color: $color;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .login-buttonform{
+            display:block;
+            text-align: center;
+            .login-button{
+                color: $color;
+                width: 240px;
+                margin-top: 30px;
+                background: #FFDE2A !important;
+                border: 1px solid #FFDE2A;
+            }
+        }
+         .el-form{
+             .el-form-item:first-child{
+                .el-input{
+                    input{
+                        padding-left: 40px;
+                        // background: url('/static/img/usericon1.png') no-repeat;
+                        background-position: 5px 7px;
+                        border: 0px;
+                        border-radius: 0;
+                        // border-bottom: 1px #ccc solid;
+                    }
+                    border-bottom: 1px #ccc solid;
+                }
+             }
+             .el-form-item{
+                .el-input{
+                    input{
+                        padding-left: 40px;
+                        // background: url('/static/img/Password-icon1.png') no-repeat;
+                        background-position: 5px 7px;
+                        border: 0px;
+                        border-radius: 0;
+                        // border-bottom: 1px #ccc solid;
+                    }
+                    border-bottom: 1px #ccc solid;
+                }
+             }
+             .regSpan{
+                 width: 167px;
+                 float: left;
+                 a{
+                    float: left;
+                     color:#409eff;
+                     text-decoration: none;
+                 }
+             }
+             .forgetPass{
+                 a{
+                     color:#ccc;
+                     text-decoration: none;
+                 }
+             }
+         }
+    }
+}
+
+//消除google浏览器黄色框
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus {
+    box-shadow:0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #555;
+}
+
+// input:-webkit-autofill{
+// -webkit-box-shadow: 0 0 0 30px white inset !important;  //使用足够大的纯色内阴影覆盖黄色背景
+// }
+
+//解决黄底问题
+.input-warp{
+    position: relative;
+    img{
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        z-index: 99;
+    }
+}
+
+button,input{
+    outline: none !important;
+}
+.login-button,.forget-button,.getcode{
+    background: #FFDE2A ;
+    border: 1px solid #FFDE2A;
+}
