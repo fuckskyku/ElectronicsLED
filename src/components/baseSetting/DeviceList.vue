@@ -23,7 +23,7 @@
                             <el-input  placeholder="请输入mac地址" clearable @change="keyWordsInput" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                         <span style="float:right;">                                 
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editdevice',0)" v-hasButton name="memberclientlist:edit">新增设备</el-button>
-                            <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>

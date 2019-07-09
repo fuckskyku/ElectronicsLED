@@ -21,7 +21,7 @@
                          <span style="float:right;">      
                            <el-button type="primary" round icon="el-icon-upload"><a href="/static/uploads/template/考生模板.xls" style="color:#000;text-decoration: none;" target="_blank">下载考生模板</a></el-button>                      
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip2('editexaminationroomdetail',0)" v-hasButton name="memberexaminationroomlist:view">新增考场信息</el-button>
-                            <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
+                            <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
                             <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                             <el-button type="primary" round icon="iconfont icon-returnfanhuizuo"  @click="skip('examinationroomlist')">返回</el-button>
                         </span>

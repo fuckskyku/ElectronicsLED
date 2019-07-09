@@ -20,7 +20,7 @@
                         <el-input  placeholder="请输入用户名或手机号" @input="keyWordsInput(keywordsVal)" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                          <span style="float:right;">  
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('edituser',0)"  v-hasButton name="memberuserlist:edit">新增用户</el-button>
-                        <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
+                        <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
                         <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>

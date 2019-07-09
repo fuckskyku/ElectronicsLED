@@ -13,9 +13,9 @@ module.exports = {
     proxyTable: {
       ///api 是要代理的目录 target 是目标URL，即后台接口的真正位置 changeOrigin 为是否修改源，当时用ajax且跨域测试时需为truepathRewrite 为路由重定向
       '/api': {
-        target: "http://192.168.2.5:8080/",
+        //target: "http://192.168.2.5:8080/",
         //target: "http://localhost:52881/",
-        //target:"http://api.dzbp.mseenet.com/",
+        target:"http://api.dzbp.mseenet.com/",
         changeOrigin: true,
         pathRewrite: { 
           '^/api': '/api',

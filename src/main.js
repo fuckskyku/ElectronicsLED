@@ -42,7 +42,6 @@ import store from './store/Store'
 import util from './util/util'
 
 //引用第三方js
-// import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
 

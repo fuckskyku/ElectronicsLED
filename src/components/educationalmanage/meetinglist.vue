@@ -19,7 +19,7 @@
                             <el-input  placeholder="请输入标题"  @change="keyWordsInput" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                          <span style="float:right;">                            
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editmeeting',0)"  v-hasButton name="membermeetinglist:edit">新增会议</el-button>
-                            <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>
@@ -35,7 +35,7 @@
                           </el-table-column>
                           <el-table-column prop="showBeginTime" label="显示时间" align="center"  :show-overflow-tooltip="true">
                             <template slot-scope="scope">
-                              <span>{{ scope.row.showBeginTime | formatDate }}</span>
+                              <span>{{ scope.row.showBeginTime | formatDate }}</span> 
                             </template>
                           </el-table-column>
                           <el-table-column prop="meetingAddress" label="地址"></el-table-column>

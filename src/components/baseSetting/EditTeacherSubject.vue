@@ -140,32 +140,35 @@ export default {
           // var newTargetClassIds = "";
           
           console.log('TeacherSubjectId:',this.form.teacherSubjectId,'TeacherId:',this.form.teacherId,'SubjectId:',this.form.subjectId,'ClassId:',this.form.classId,'TargetClassIds:',this.newTargetClassIds)
-          editTeacherSubject({
-            TeacherSubjectId: this.form.teacherSubjectId,
-            TeacherId: this.form.teacherId,
-            SubjectId: this.form.subjectId,
-            ClassId: this.form.classId,
-            TargetClassIds: this.newTargetClassIds
-          }).then(res => {
-            if (res.data.code == 200) {
-              console.log(res);
-              this.$message({
-                type: "success",
-                message: res.data.message
-              });
-              this.$router.push({
-                name: "teachersubjectlist",
-                params: {
-                  teacherId: this.form.teacherId
-                }
-              });
-            } else {
-              this.$message({
-                type: "error",
-                message: res.data.message
-              });
-            }
-          });
+          if(this.newTargetClassIds != ''){
+            editTeacherSubject({
+              TeacherSubjectId: this.form.teacherSubjectId,
+              TeacherId: this.form.teacherId,
+              SubjectId: this.form.subjectId,
+              ClassId: this.form.classId,
+              TargetClassIds: this.newTargetClassIds
+            }).then(res => {
+              if (res.data.code == 200) {
+                console.log(res);
+                this.$message({
+                  type: "success",
+                  message: res.data.message
+                });
+                this.$router.push({
+                  name: "teachersubjectlist",
+                  params: {
+                    teacherId: this.form.teacherId
+                  }
+                });
+              } else {
+                this.$message({
+                  type: "error",
+                  message: res.data.message
+                });
+              }
+            });
+          }
+          
         } else {
           console.log("error submit!!");
           return false;

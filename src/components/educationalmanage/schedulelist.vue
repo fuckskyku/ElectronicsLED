@@ -20,7 +20,7 @@
                          <span style="float:right;">              
                             <el-button type="primary" round icon="el-icon-date" @click="download('/static/uploads/template/作息表模板.xls')">下载作息表模板</el-button>             
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editschedule',0)"  v-hasButton name="memberschedulelist:edit">新增作息表</el-button>
-                            <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>

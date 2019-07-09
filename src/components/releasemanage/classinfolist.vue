@@ -19,8 +19,8 @@
                         <el-input clearable @input="keyWordsInput(keywordsVal)" v-model="keywordsVal" placeholder="请输入班级名称" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                         <span style="float:right;">                           
                           <el-button type="primary" round icon="el-icon-edit"  @click="skip('editclassinfo',0)"  v-hasButton name="memberclassinfolist:edit">设置班级介绍</el-button>
-                          <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
-                          <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button>
+                          <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
+                          <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>
                  </el-header>

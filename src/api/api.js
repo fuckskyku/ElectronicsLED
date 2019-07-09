@@ -6,6 +6,8 @@ export const getQiniuToken = param => { return req.get('/bp/getQiniuToken', para
 //帐号登录
 export const login = param => { return req.post('/admin/login', param) }
 
+export const getSchoolNameAndLogo=param => { return req.get('/admin/getSchoolNameAndLogo', param) }
+
 //【首页】获取学校统计
 export const getSchoolStatistic = param => { return req.get('/admin/getSchoolStatistic', param) }
 

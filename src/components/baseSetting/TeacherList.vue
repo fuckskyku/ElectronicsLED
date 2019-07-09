@@ -24,7 +24,7 @@
                          <span style="float:right;">                           
                             <el-button type="primary" round icon="iconfont icon-daoru"  @click="skip('importteacher',0)">批量导入老师</el-button>
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editteacher',0)"  v-hasButton name="memberteacherlist:edit">新增老师</el-button>
-                            <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>

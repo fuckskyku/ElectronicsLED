@@ -24,8 +24,8 @@
                   <el-input  placeholder="请输入标题关键词" clearable @input="keyWordsInput(keywordsVal)" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                   <span style="float:right;">
                     <el-button type="primary" round="" icon="iconfont icon-zengjia"  @click="skip('editnews',0)" v-hasButton name="membernewslist:edit">新增资讯</el-button>
-                    <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
-                    <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button>
+                    <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
+                    <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                   </span>
                 </el-row>
               </el-header>
@@ -65,8 +65,8 @@
                   <el-input  placeholder="请输入关键词" clearable @input="keyWordsInput2(keywordsVal)" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                   <span style="float:right;">
                     <el-button type="primary" round="" icon="iconfont icon-zengjia"  @click="skip('editnewstype',-1)" v-hasButton name="membernewslist:edit">新增类别</el-button>
-                    <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
-                    <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button>
+                    <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
+                    <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                   </span>
                 </el-row>
               </el-header>

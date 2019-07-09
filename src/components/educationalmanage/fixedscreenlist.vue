@@ -19,7 +19,7 @@
               <el-header style="height:auto;">
                 <el-row :gutter="20" class="searchcontent">
                   <span style="float:right;">
-                    <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button>
+                    <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                   </span>
                 </el-row>
               </el-header>
@@ -49,8 +49,8 @@
                   <el-input clearable placeholder="请输入关键词" @input="keyWordsInput(keywordsVal)" v-model="keywordsVal" suffix-icon="el-icon-search" style="width:230px;"></el-input>
                   <span style="float:right;">
                     <el-button type="primary" round="" icon="el-icon-edit"  @click="skip('editfixedscreen',0)" v-hasButton name="memberscreenlist:edit">设置占屏</el-button>
-                    <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button>
-                    <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button>
+                    <!-- <el-button type="primary" @click="clear" round icon="el-icon-delete">清空</el-button> -->
+                    <!-- <el-button type="primary" @click="refresh" round icon="el-icon-refresh">刷新</el-button> -->
                   </span>
                 </el-row>
               </el-header>

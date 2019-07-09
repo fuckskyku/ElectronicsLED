@@ -20,7 +20,7 @@
                             <el-input  placeholder="请输入老师名称" suffix-icon="el-icon-search" style="width:230px;"  @change="keyWordsInput"></el-input>
                          <span style="float:right;">                            
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip2('editteachersubject',0)"  v-hasButton name="memberteacherlist:edit">新增任课</el-button>
-                            <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete" @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                             <el-button type="primary" round icon="iconfont icon-returnfanhuizuo" @click="skip('teacherlist',0)">返回</el-button>
                         </span>

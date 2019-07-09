@@ -49,7 +49,7 @@
 </style>
 <script>
 //接口切换学校
-import { setSchoolCredential,getMySchoolList, getSchoolInfo } from '@/api/api.js'
+import { setSchoolCredential,getMySchoolList, getSchoolNameAndLogo } from '@/api/api.js'
 
 export default {
   props: {
@@ -100,9 +100,8 @@ export default {
                 
               }
             });
-            getSchoolInfo().then(res => { 
+            getSchoolNameAndLogo().then(res => { 
               if(res.data.code == 200){
-                console.log('info',res.data.data)
                 this.firstSchool = res.data.data.schoolName
                 if(res.data.data.logo=='' || res.data.data.logo==null){          
                   this.icon='/static/img/schoollogo.png'
@@ -142,7 +141,7 @@ export default {
           
         }
       });
-      getSchoolInfo().then(res => { 
+      getSchoolNameAndLogo().then(res => { 
         if(res.data.code == 200){
           this.firstSchool = res.data.data.schoolName
           if(res.data.data.logo=='' || res.data.data.logo==null){          

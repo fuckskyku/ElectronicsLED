@@ -44,12 +44,6 @@ axios.interceptors.response.use(function (response) {
 
 // axios.defaults.timeout = 10000
 
-// var instance = axios.create({ 
-//     baseURL: 'https://some-domain.com/api/',
-//     timeout: 1000,
-//     headers: {'X-Custom-Header': 'foobar'}
-//   }); 
-
 export default {
     //get请求
     get(url, param) {

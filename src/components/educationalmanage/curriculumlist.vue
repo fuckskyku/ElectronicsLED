@@ -22,7 +22,7 @@
                          <span style="float:right;">              
                             <el-button type="primary" round icon="el-icon-date" @click="download('/static/uploads/template/课程表模板.xls')">下载课程表模板</el-button>              
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editcurriculum',0)"  v-hasButton name="membercurriculumllist:view">新增课程表</el-button>
-                            <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                         </span>
                      </el-row>

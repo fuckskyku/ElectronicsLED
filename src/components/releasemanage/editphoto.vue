@@ -340,7 +340,6 @@ export default {
     //左移
     toLeft(arr, index, length) {
       this.imagelist = [];
-      console.log("arr", arr, "index", index, "length", length);
       if (index == 0) {
         this.$confirm("图片已经置顶咯", "提示", {
           confirmButtonText: "确定",
@@ -349,7 +348,6 @@ export default {
         }).then(() => {});
       } else {
         this.swapArray(this.details, index, index - 1);
-        console.log("this.details", this.details);
         this.details.map((item, index) => {
           this.imagelist.push({ name: "", url: item.url });
           //获取图片描述
@@ -361,7 +359,6 @@ export default {
     },
     //右移
     toRight(arr, index, length) {
-      console.log("arr", arr, "index", index, "length", length);
       this.imagelist = [];
       if (index == length - 1) {
         this.$confirm("到底啦", "提示", {
@@ -371,7 +368,6 @@ export default {
         }).then(() => {});
       } else {
         this.swapArray(arr, index, index + 1);
-        console.log("this.details", this.details);
         this.details.map((item, index) => {
           this.imagelist.push({ name: "", url: item.url });
           //获取图片描述
@@ -379,13 +375,10 @@ export default {
         });
         this.transUrl(this.imagelist);
         this.imgUrls = this.tempUrl.join(",");
-        console.log("this.tempDescribes", this.tempDescribes);
-        console.log("this.imgUrls", this.imgUrls);
       }
     },
     swapArray(arr, index1, index2) {
       arr[index1] = arr.splice(index2, 1, arr[index1])[0];
-      console.log("arr", arr, "this.details", this.details);
     },
     handleAvatarSuccess(res, file) {
       console.log(file);

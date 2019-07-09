@@ -22,7 +22,7 @@
                             <!-- <el-button type="primary" round icon="iconfont icon-daoru"  @click="skip('importclassroom',0)">批量导入教室</el-button> -->
                             <el-button type="primary" round icon="iconfont icon-daoru"  @click="skip('importclassroom',0)">批量导入教室</el-button>
                             <el-button type="primary" round icon="iconfont icon-zengjia"  @click="skip('editclassroom',0)" v-hasButton name="memberbuildinglist:edit">新增教室</el-button>
-                            <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button>
+                            <!-- <el-button type="primary" round icon="el-icon-delete"  @click="keyWordsInput('')">清空</el-button> -->
                             <!-- <el-button type="primary" round icon="el-icon-refresh">刷新</el-button> -->
                          </span>
                      </el-row>

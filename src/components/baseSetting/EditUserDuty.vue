@@ -1,41 +1,39 @@
 <template>
-	<div id="app">
-		<main>
-          
-          <el-aside class="nav" style="width:100%">
-             <el-breadcrumb separator-class="el-icon-arrow-right">
-              <el-breadcrumb-item to="/home">首页</el-breadcrumb-item>
-              <el-breadcrumb-item to="/basesettingindex">基础设置</el-breadcrumb-item>
-              <el-breadcrumb-item to="/basesettingindex">账号管理</el-breadcrumb-item>
-              <el-breadcrumb-item to="/userdutylist">职务管理</el-breadcrumb-item>
-              <el-breadcrumb-item>编辑信息</el-breadcrumb-item>
-             </el-breadcrumb>
-             <div class="goback" @click="$router.push({name: 'userdutylist'})">
-                <img src="/static/img/返回.png" alt="">返回
-              </div>
-          </el-aside>
-           <div class="editInfo">
-           <el-form ref="form" :model="form" label-width="280px" :rules="rules"> 
-                <el-form-item label="职务名称:"  prop="dutyName">
-                     <el-input v-model="form.dutyName" size="small"></el-input>
-                </el-form-item>
-                <el-form-item label="选择权限:">
-                      <table class="dataTable table-no-bordered" data-show-columns="false"></table>
-                 </el-form-item>
-                 <el-form-item style="text-align:center;">
-                       <el-button type="primary" @click="onSubmit('form')" class="submit">保存</el-button>
-                       <el-button class="cancel" type="info"  @click="skip('userdutylist')">取消</el-button>
-                 </el-form-item>
-           </el-form>
-          </div>
-		</main>
-	</div>
+  <div id="app">
+    <main>
+      <el-aside class="nav" style="width:100%">
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item to="/home">首页</el-breadcrumb-item>
+          <el-breadcrumb-item to="/basesettingindex">基础设置</el-breadcrumb-item>
+          <el-breadcrumb-item to="/basesettingindex">账号管理</el-breadcrumb-item>
+          <el-breadcrumb-item to="/userdutylist">职务管理</el-breadcrumb-item>
+          <el-breadcrumb-item>编辑信息</el-breadcrumb-item>
+        </el-breadcrumb>
+        <div class="goback" @click="$router.push({name: 'userdutylist'})">
+          <img src="/static/img/返回.png" alt="">返回
+        </div>
+      </el-aside>
+      <div class="editInfo">
+        <el-form ref="form" :model="form" label-width="280px" :rules="rules">
+          <el-form-item label="职务名称:" prop="dutyName">
+            <el-input v-model="form.dutyName" size="small" :disabled="dutyDisable"></el-input>
+          </el-form-item>
+          <el-form-item label="选择权限:">
+            <table class="dataTable table-no-bordered" data-show-columns="false"></table>
+          </el-form-item>
+          <el-form-item style="text-align:center;">
+            <el-button type="primary" @click="onSubmit('form')" class="submit">保存</el-button>
+            <el-button class="cancel" type="info" @click="skip('userdutylist')">取消</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+    </main>
+  </div>
 </template>
 <style lang="scss">
 //scoped 表示唯一
 @import "@/assets/Scss/main.scss";
 </style>
-
 
 <script>
 import Header from "@/components/publicTemplate/Header";
@@ -46,6 +44,7 @@ export default {
   data() {
     return {
       dutyId: "",
+      dutyDisable: false,
       form: {
         dutyName: "",
         permissionIds: ""
@@ -63,7 +62,8 @@ export default {
       var checkboxStr = document.getElementsByName("permission");
       var check_val = "";
       for (var i = 0; i < checkboxStr.length; i++) {
-        if (checkboxStr[i].checked &&  checkboxStr[i].value!= '0') check_val += checkboxStr[i].value + ",";
+        if (checkboxStr[i].checked && checkboxStr[i].value != "0")
+          check_val += checkboxStr[i].value + ",";
       }
       check_val =
         check_val != "" ? check_val.substring(0, check_val.length - 1) : "";
@@ -103,7 +103,7 @@ export default {
     var bootstrapTable;
     getModulePermission().then(res => {
       bootstrapTable = res.data.data;
-
+      console.log(res.data.data)
       $(".dataTable").bootstrapTable({
         toggle: "table",
         data: bootstrapTable,
@@ -159,6 +159,15 @@ export default {
         getDutyDetail({ id: this.dutyId }).then(res => {
           var obj = res.data.data;
           this.form = obj;
+          if (
+            obj.dutyName == "校长" ||
+            obj.dutyName == "副校长" ||
+            obj.dutyName == "年段长" ||
+            obj.dutyName == "班主任"
+          ) {
+            this.dutyDisable = true;
+          }
+
           var rolePermissions = obj.permissionIds;
           if (rolePermissions != "") {
             var array = rolePermissions.split(",");

@@ -20,8 +20,8 @@
               <el-upload class="upload-demo" :headers="headers" style="height: 40px" ref="upload" name="file" action="/api/admin/editImportStudent" :on-change="fileChange" :before-upload="beforeAvatarUploadFile" :on-success="handleAvatarSuccessFile" :show-file-list="false" :auto-upload='false'  :multiple="false">
                 <el-button icon="el-icon-upload" class="seach_yellow" type="primary">点击选择文件</el-button>
               </el-upload>
-              <span class="tips" v-if="fileFlagErr" style="color: #FF7262;"><i class="el-icon-error"></i> 选择失败</span>
-              <span class="tips" v-if="fileFlag" style="color: #0ACF83;"><i class="el-icon-success"></i> 选择成功</span>
+              <span class="tips" v-if="fileFlagErr" style="color: #FF7262;width: 100px;"><i class="el-icon-error"></i> 选择失败</span>
+              <span class="tips" v-if="fileFlag" style="color: #0ACF83;width: 100px;"><i class="el-icon-success"></i> 选择成功</span>
                   <!-- <el-input  size="small" prefix-icon="el-icon-upload2" placeholder="点击选择文件"></el-input> -->
                   <div>
                       <a href="http://dzbp.mseenet.com/uploads/template/StudentInfotemp.xls" download="学生导入模板">下载学生信息模板</a>
@@ -89,7 +89,7 @@ export default {
       let Xls = file.name.split('.')
       if (Xls[1] === 'xls' || Xls[1] === 'xlsx') {
         if (file.status == 'ready') {
-          this.$message.success('选择成功')
+          // this.$message.success('选择成功')
           this.fileFlag = true
           this.fileFlagErr = false
         }

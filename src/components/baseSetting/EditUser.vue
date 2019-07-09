@@ -91,7 +91,7 @@ export default {
         key: ""
       },
       imagelist: [],
-      dialogImageUrl: "/static/img/shuiyin.png",
+      dialogImageUrl: "",
       dialogVisible: false,
       imgData: {
         accept: "image/gif, image/jpeg, image/png, image/jpg"
