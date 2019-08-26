@@ -26,8 +26,8 @@
         center>
         <span>
               <img class="tips" src="/static/img/tip-war.png" alt="">
-              请耐心等待咪师官方工作人员与您取得联系，验证学校资质
-              后方可进行操作。或者您可与咪师官方主动联系，尽快完成
+              请耐心等待喵喵官方工作人员与您取得联系，验证学校资质
+              后方可进行操作。或者您可与喵喵官方主动联系，尽快完成
               认证，全国热线电话：400-XXXXXX。</span>
         <span slot="footer" class="dialog-footer">
           <el-button @click="show = false">取 消</el-button>
