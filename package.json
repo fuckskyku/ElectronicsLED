@@ -19,7 +19,7 @@
     "deepmerge": "^2.2.1",
     "element-ui": "^2.4.8",
     "jquery": "^3.3.1",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "popper.js": "^1.14.4",
     "qiniu-js": "^2.5.3",
     "sass-loader": "^7.1.0",
